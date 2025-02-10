@@ -13,24 +13,83 @@
 <body>
     <!-- 헤더부분 -->
     <header>
-        <div id="header_div">
-            <div id="header_sidespace"></div>
-            <div id="header_a">
-                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://section.blog.naver.com" target="_blank"><i class="fa-solid fa-blog"></i></a>
-                <a href="https://section.cafe.naver.com" target="_blank"><i class="fa-solid fa-mug-saucer"></i></a>
-            </div>
-            <div id="header_space"></div>
-            <div>검색창</div>
-            <div id="header_sidespace"></div>
+        <div id="header-left-space"></div>
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://section.blog.naver.com" target="_blank"><i class="fa-solid fa-blog"></i></a>
+            <a href="https://section.cafe.naver.com" target="_blank"><i class="fa-solid fa-mug-saucer"></i></a>
         </div>
-        <!-- <hr id="header_line"> -->
+        <div id="header-center-space"></div>
+        <div class="header-buttons">
+            <button onclick="showLogin()">로그인</button>
+            <button onclick="showSignup()">회원가입</button>
+        </div>
+        <div class="header-serchInput">
+            <input type="text" id="searchInput" placeholder=" 검색어 입력">
+            <button onclick="handleSearch()">검색</button>
+        </div>
+        <div id="header-right-space"></div>
     </header>
+
+    <!-- 로고부분 -->
+    <section class="banner">
+        <div>
+            <!-- 왼쪽에다가는 이미지나 간단한 홍보 용도의 공간으로 활용 -->
+        </div>
+        <div class="logo">
+            <img src="">
+        </div>
+    </section>
 
     <!-- 네비부분 -->
     <nav>
+        <div id="nav-left-space"></div>
+        <div class="nav-catlaunge">
+            <b>고양이 사랑방</b>
+            <div class="catlaunge-dropdown">
+                <b>
+                    <a href="#" onclick="showIntro()">소개</a>
+                    <a href="#" onclick="showStep()">분양 절차</a>
+                </b>
+            </div>
+        </div>
+        <div class="nav-adoption">
+            <b>고양이 분양</b>
+            <div class="adoption-dropdown">
+                <b>
+                    <a href="#" onclick="showMunchkin()">먼치킨</a>
+                    <a href="#" onclick="showScottishFold()">스코티쉬폴드</a>
+                    <a href="#" onclick="showBritishShorthair()">브리티쉬숏헤어</a>
+                    <a href="#" onclick="showAbyssinian()">아비시니안</a>
+                    <a href="#" onclick="showAmericanShorthair()">아메리칸숏헤어</a>
+                    <a href="#" onclick="showRagdoll()">렉돌</a>
+                    <a href="#" onclick="showNorwegianForest()">노르웨이숲</a>
+                    <a href="#" onclick="showPersian()">페르시안</a>
+                    <a href="#" onclick="showRussianBlueOrSiamese()">레이상블루/샴</a>
+                    <a href="#" onclick="showBengal()">뱅갈</a>
+                    <a href="#" onclick="showMaineCoon()">메인쿤</a>
+                    <a href="#" onclick="showSpecial()">특수묘</a>
 
+                </b>
+            </div>
+        </div>
+        <div class="nav-foster">
+            <b>임시보호 서비스</b>
+            <div class="foster-dropdown">
+                <b>
+                    <a href="#">서비스 및 시설</a>
+                    <a href="#">예약</a>
+                </b>
+            </div>
+        </div>
+        <div class="nav-community">
+            <b>커뮤니티</b>
+        </div>
+        <div class="nav-announcements">
+            <b>공지사항</b>
+        </div>
+        <div id="nav-right-space"></div>
     </nav>
 
     <!-- 메인 부분 -->

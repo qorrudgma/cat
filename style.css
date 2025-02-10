@@ -1,28 +1,86 @@
-body{
+/* 버튼 기본 스타일 */
+button {
+    background-color: #ffaa9d;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    background-color: #f8d7da;
+    color: #d57b6e;
+}
+
+body {
+    flex-direction: column;
     text-align: center;
     width: 100%;
     padding: 0;
     margin: 0;
     display: flex;
+    background-color: rgb(236, 236, 236);
 }
-header{
+
+/* 헤더 */
+header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-bottom: 1px solid rgb(200, 200, 200);
     width: 100%;
     height: 50px;
     height: 5000px;
+    border-bottom: rgb(200, 200, 200);
 }
-#header_div{
-    flex-direction: row;
-    z-index: 1000;
-    position: sticky;
-    top: 0;
+
+#header-left-space {
+    flex: 1;
 }
-#header_a{
-    font-size: larger;
+
+.social-links{
+    flex: 1;
 }
-#header_sidespace{
+
+#header-center-space {
+    flex: 3;
+}
+
+.header-button{
+    flex: 1;
+}
+.header-serchInput{
+    flex: 1;
+}
+
+#header-left-space {
+    flex: 1;
+}
+
+.social-links {
+    font-size: 1.5em;
+}
+
+#header_sidespace {
     flex-direction: column;
     width: 10%;
+}
+
+/* 로고 */
+
+
+/* 메뉴 */
+nav{
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: visible;
+}
+nav div{
+    border: 0.5px solid rgb(200, 200, 200);
+    margin: 0;
+    padding: 0;
 }
