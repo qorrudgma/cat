@@ -84,3 +84,79 @@ nav div{
     margin: 0;
     padding: 0;
 }
+
+/* footer부분 */
+footer {
+    max-width: 100%;
+    width: 100%;
+}
+
+.footer-service { 
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10%;
+    border-top: solid 1px #d1d1d1;
+    border-bottom: solid 1px #d1d1d1;
+}
+
+.footer-buttons {
+    display: flex;
+    flex: 3;
+    position: relative;
+}
+
+.button-gray {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.footer-links {
+    display: flex;
+    white-space: nowrap;
+    flex:1;
+}
+
+.footer-links a {
+    color: #d1d1d1;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.button-gray:hover, .footer-links a:hover {
+    color: #9f9f9f;
+    cursor: pointer;
+}
+
+.button-gray:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 55%;
+    width: 1px;
+    height: 40%;
+    background-color: #9f9f9f;
+    transform: translateY(-50%);
+}
+
+.footer-information {
+    display: flex;
+    height: auto;
+    background-color: #f5f5f5;
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.footer-information .footer-text {
+    display: flex;
+    color:#999999;
+    font-size: 13px;
+    text-align: left;
+    line-height: 30px;
+}
+
+/* footer부분^ */
