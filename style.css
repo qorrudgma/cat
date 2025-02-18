@@ -32,7 +32,6 @@ header {
     border-bottom: 1px solid rgb(200, 200, 200);
     width: 100%;
     height: 50px;
-    height: 5000px;
     border-bottom: rgb(200, 200, 200);
 }
 
@@ -40,7 +39,7 @@ header {
     flex: 1;
 }
 
-.social-links{
+.social-links {
     flex: 1;
 }
 
@@ -48,10 +47,11 @@ header {
     flex: 3;
 }
 
-.header-button{
+.header-button {
     flex: 1;
 }
-.header-serchInput{
+
+.header-serchInput {
     flex: 1;
 }
 
@@ -72,15 +72,100 @@ header {
 
 
 /* 메뉴 */
-nav{
+nav {
     flex-direction: row;
     position: sticky;
     top: 0;
     z-index: 100;
     overflow: visible;
 }
-nav div{
+
+nav div {
     border: 0.5px solid rgb(200, 200, 200);
     margin: 0;
     padding: 0;
 }
+
+/* footer부분 */
+footer {
+    max-width: 100%;
+    width: 100%;
+}
+
+.footer-service {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10%;
+    border-top: solid 1px #d1d1d1;
+    border-bottom: solid 1px #d1d1d1;
+}
+
+.footer-buttons {
+    display: flex;
+    flex: 3;
+    position: relative;
+}
+
+.button-gray {
+    border: none;
+    background: none;
+    padding: 10px;
+    position: relative;
+    color: gray;
+}
+
+.button-gray:hover{
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    white-space: nowrap;
+    flex: 1;
+}
+
+
+.footer-links a {
+    color: gray;
+    text-decoration: none;
+    padding: 10px;
+}
+.footer-links a:hover {
+    color: rgb(71, 71, 71);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button-gray:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 55%;
+    width: 1px;
+    height: 40%;
+    background-color: #9f9f9f;
+    transform: translateY(-50%);
+}
+
+.footer-information {
+    display: flex;
+    height: auto;
+    background-color: #f5f5f5;
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.footer-information .footer-text {
+    display: flex;
+    color: #999999;
+    font-size: 13px;
+    text-align: left;
+    line-height: 30px;
+}
+
+/* footer부분^ */
