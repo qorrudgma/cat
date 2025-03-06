@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/style.css" rel="stylesheet">
+    <link href="/public/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="/script.js"></script>
+    <script src="/public/script.js"></script>
     <title>고양이 사랑방</title>
 </head>
 
 <body>
     <!-- 헤더부분 -->
     <header>
-        <div id="header-left-space"></div>
+        <div id="header-left-space"></div> <!-- 왼쪽 여백 -->
         <div class="social-links">
             <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://section.blog.naver.com" target="_blank"><i class="fa-solid fa-blog"></i></a>
             <a href="https://section.cafe.naver.com" target="_blank"><i class="fa-solid fa-mug-saucer"></i></a>
         </div>
-        <div id="header-center-space"></div>
+        <div id="header-center-space"></div> <!-- 가운데 여백 -->
         <div class="header-buttons">
             <button onclick="showLogin()">로그인</button>
             <button onclick="showSignup()">회원가입</button>
@@ -29,22 +29,23 @@
             <input type="text" id="searchInput" placeholder=" 검색어 입력">
             <button onclick="handleSearch()">검색</button>
         </div>
-        <div id="header-right-space"></div>
+        <div id="header-right-space"></div> <!-- 오른쪽 여백 -->
     </header>
 
     <!-- 로고부분 -->
     <section class="banner">
-        <div>
-            <!-- 왼쪽에다가는 이미지나 간단한 홍보 용도의 공간으로 활용 -->
-        </div>
         <div class="logo">
-            <img src="">
+            <a href="#"><img src="images/Cat-Lounge_Logo.png"></a>
         </div>
+        <div class="catlounge">
+            <a href="#" onclick="logo()">고양이 사랑방</br>Cat Lounge</a>
+        </div>
+        <div id="logo-space"></div>
     </section>
 
     <!-- 네비부분 -->
-    <nav>
-        <div id="nav-left-space"></div>
+    <nav class="nav">
+        <div id="nav-space"></div>
         <div class="nav-catlaunge">
             <b>고양이 사랑방</b>
             <div class="catlaunge-dropdown">
@@ -89,7 +90,7 @@
         <div class="nav-announcements">
             <b>공지사항</b>
         </div>
-        <div id="nav-right-space"></div>
+        <div id="nav-space"></div>
     </nav>
 
     <!-- 메인 부분 -->
