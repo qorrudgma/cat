@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="login-section">
+        <h2>로그인</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <table border="1">
+                <tr>
+                    <th><h3>로그인</h3></th>
+                    <th><h3>비회원 조회</h3></th>
+                </tr>
+                <tr id="tabletr-id">
+                    <th><label for="id">아이디:</label></th>
+                    <td><input type="text" id="id" class="input-field" required></td>
+                </tr>
+                <tr class="tabletr-pw">
+                    <th><label for="password">비밀번호:</label></th>
+                    <td><input type="password" id="password" class="input-field" required></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="button-group">
+                        <button class="btn1" type="submit">로그인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th><h3>아이디 찾기</h3></th>
+                    <th><h3>비밀번호 찾기</h3></th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button-group">
+                        <button class="btn1" type="submit">회원가입</button>
+                        <button class="btn1" type="submit">비회원 주문</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"></th>
+                </tr>
+            </table>
+
+
+            <!-- 
+                1번줄 위에 로그인 이라고 적지말고 로고 사진을 넣기 로고는 누르면 홈으로 이동
+                2번줄 로그인과 비회원 주문 조회 두가지로 나누기
+                        세가지를 선택하면 해당 옵션에 맞게 아래들이 바뀌게 만들기
+                    *로그인
+                3    아이디 비밀번호라고 적지말고 그냥 텍스트 박스를 넣어서 안에다가 글 적기
+                4    로그인 버튼을 오른쪽에다가 넣기 가운데말고 가운데 디자인 별로
+                5    회원 가입 버튼을 넣어야하는데 버튼말고 글자를 하이퍼링크해서 넣기
+                        버튼으로 하기엔 디자인 별로 + 로그인 버튼을 부각 시켜야함
+                        그러면서 아직 회원 아니냐 회원이면 특별한 혜택과 이벤트가 있다 설명하기
+                    *비회원주문 조회
+                1   이름과 주문번호 두가지를 적어서 내 주문 사항을 조회할수있게 한다 이걸로 api부분이 바뀌게
+            -->
+        </form>
+    </section>
+</body>
+
+</html>
