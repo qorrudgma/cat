@@ -90,27 +90,23 @@ const pages = {
         </section>
     `, 
     login: `
-        <section class="login-section">
-            <h2>로그인</h2>
-            <form id="loginForm" onsubmit="handleLogin(event)">
-                <table>
-                    <tr id="tabletr-id">
-                        <th><label for="id">아이디:</label></th>
-                        <td><input type="text" id="id" class="input-field" required></td>
-                    </tr>
-                    <tr class="tabletr-pw">
-                        <th><label for="password">비밀번호:</label></th>
-                        <td><input type="password" id="password" class="input-field" required></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td colspan="3" class="button-group">
-                            <button class="btn1" type="submit">로그인</button>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </section>
+    <section class="login-section">
+        <h1>LOGIN</h1>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div>
+                <input type="text" id="id" class="input-id" placeholder="아이디" required>
+            </div>
+            <div>
+                <input type="password" id="password" class="input-pw" placeholder="비밀번호" required>
+            </div>
+            <div id="a">
+                <a href="#">아이디 찾기</a>|<a href="#">비밀번호 찾기</a>|<a href="#">회원가입</a>
+            </div>
+            <div>
+                <button class="btn1" type="submit">로그인</button>
+            </div>
+        </form>
+    </section>
     `,
     signup: `
         <section class="signup-section">
