@@ -91,13 +91,13 @@ const pages = {
     `, 
     login: `
     <section class="login-section">
-        <h1>LOGIN</h1>
+        <h1>로그인</h1>
         <form id="loginForm" onsubmit="handleLogin(event)">
             <div>
-                <input type="text" id="id" class="input-id" placeholder="아이디" required>
+                <input type="text" id="id" class="input-field" placeholder="아이디" required>
             </div>
             <div>
-                <input type="password" id="password" class="input-pw" placeholder="비밀번호" required>
+                <input type="password" id="password" class="input-field" placeholder="비밀번호" required>
             </div>
             <div id="a">
                 <a href="#">아이디 찾기</a>|<a href="#">비밀번호 찾기</a>|<a href="#">회원가입</a>

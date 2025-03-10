@@ -386,6 +386,10 @@ footer {
 }
 
 /* ---------- 로그인 부분  ---------- */
+#loginForm, #signupForm {
+    text-align: left;
+}
+
 .login-section, .signup-section {
     display: flex;
     align-items: center;
@@ -409,7 +413,7 @@ footer {
     color: #ffaa9d;
 }
 
-.input-id, .input-pw {
+.input-field {
     flex: 2;
     padding: 10px;
     border: 1px solid #d1d1d1;
@@ -445,20 +449,41 @@ footer {
 }
 
 /* ---------- 회원가입 부분  ---------- */
+.signup-label{
+    width: 200px;
+    font-size: 1rem;
+    margin: auto 20px;
+    text-align: right;
+}
 
+.signup-id-check{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#div-id{
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {/* input type="number" 에서 오른쪽에 스핀버튼 없애기 */
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#birth-label{
+    display: flex;
+    margin-left: 250px;
+    color: #a4a4a4;
+}
+
+/* 버튼 위치 옮기기 */
+#signup-btn{
+
+}
 
 /* --------- */
-
-/* 회원가입 부분 */
-
-#signupForm, #loginForm {
-    text-align: left;
-}
-
-#signupForm th #loginForm th{
-    width: 150px;
-}
-
 .backtext {
     color: #a4a4a4;
     font-size: 1rem;
