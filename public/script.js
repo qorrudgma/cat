@@ -88,7 +88,7 @@ const pages = {
                  <img src="video.png" alt="video">
             </div>
         </section>
-    `, 
+    `,
     login: `
     <section class="login-section">
         <h1>로그인</h1>
@@ -110,54 +110,57 @@ const pages = {
     `,
     signup: `
         <section class="signup-section">
-            <h2>회원가입</h2>
-            <form id="signupForm" onsubmit="handleSignup(event)">
-                <table>
-                    <tr id="tabletr-id">
-                        <th><label for="id">아이디:</label></th>
-                        <td><input type="text" id="id" class="input-field" required></td>
-                        <td><button type="button" id="idCheckBtn" class="btn1" onclick="checkId()">중복 확인</button></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td class="backtext" colspan="2">영문소문자/숫자,4~16자</td>
-                    </tr>
-                    <tr class="tabletr-pw">
-                        <th><label for="password">비밀번호:</label></th>
-                        <td><input type="password" id="password" class="input-field" required></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td class="backtext" colspan="2">영문 대소문자/숫자/특수문자 2가지 이상 조합,4~16자</td>
-                    </tr>
-                    <tr class="tabletr-pw">
-                        <th><label for="confirmPassword">비밀번호 확인:</label></th>
-                        <td><input type="password" id="confirmPassword" class="input-field" required></td>
-                        <td><span id="passwordMessage" class="message"></span></td>
-                    </tr>
-                    <tr id="tabletr-name">
-                        <th><label for="name">이 름:</label></th>
-                        <td><input type="text" id="name" class="input-field" required></td>
-                    </tr>
-                    <tr id="tabletr-phone">
-                        <th><label for="phone">전화번호:</label></th>
-                        <td>
-                            <input type="tell" id="phone1" maxlength="3" placeholder="000" placeholder="000" class="input-small">-
-                            <input type="tell" id="phone2" maxlength="4" placeholder="0000" class="input-small">-
-                            <input type="tell" id="phone3" maxlength="4" placeholder="0000" class="input-small">
-                        </td>
-                    </tr>
-                    <tr id="tabletr-email">
-                        <th><label for="email">이메일:</label></th>
-                        <td><input type="email" id="email" class="input-field" required></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td colspan="3" class="button-group">
-                            <button class="btn1" type="submit">회원가입</button>
-                        </td>
-                    </tr>
-                </table>
+            <h1>회원가입</h1>
+            <form id="signupForm" onsubmit="handleLogin(event)">
+                <div class="signup-id-check">
+                    <div id="div-id">
+                        <label for="signup-id" class="signup-label">아이디</label>
+                        <input type="text" id="signup-id" class="input-field" placeholder="아이디" required>
+                    </div>
+                    <div id="div-btn">
+                        <button id="id-check" class="btn1">중복 체크</button>
+                    </div>
+                </div>
+                <div id="input-label">
+                    <label for="signup-id" class="signup-input-label">
+                        아이디는 4~20자의 영문 대/소문자 및 숫자로만 구성해야 하며,<br>띄어쓰기와 특수문자는 사용할 수 없습니다.
+                    </label>
+                </div>
+                <div>
+                    <label for="password" class="signup-label">비밀번호</label>
+                    <input type="password" id="password" class="input-field" placeholder="비밀번호" required>
+                </div>
+                <div id="input-label">
+                    <label for="password" class="signup-input-label">
+                        비밀번호는 8~20자의 영문 대/소문자, 숫자,<br>특수문자를 포함해야 하며,띄어쓰기는 사용할 수 없습니다.
+                    </label>
+                </div>
+                <div>
+                    <label for="password-check" class="signup-label">비밀번호 확인</label>
+                    <input type="password" id="password-check" class="input-field" placeholder="비밀번호 확인" required>
+                </div>
+                <div>
+                    <label for="signup-name" class="signup-label">이름</label>
+                    <input type="text" id="signup-name" class="input-field" placeholder="이름" required>
+                </div>
+                <div>
+                    <label for="signup-tel" class="signup-label">전화번호</label>
+                    <input type="number" id="signup-tel" class="input-field" placeholder="숫자만 입력하세요" required>
+                </div>
+                <div>
+                    <label for="signup-birth" class="signup-label">생년월일</label>
+                    <input type="number" id="signup-birth" class="input-field" placeholder="생년월일" required>
+                </div>
+                <div id="input-label">
+                    <label for="signup-birth" class="signup-input-label">ex)2000년 01월 01일 -> 20000101</label>
+                </div>
+                <div>
+                    <label for="signup-email" class="signup-label">이메일</label>
+                    <input type="email" id="signup-email" class="input-field" placeholder="이메일" required>
+                </div>
+                <div id="signup-btn">
+                    <button class="btn1" type="submit">회원가입</button>
+                </div>
             </form>
         </section>
     `,
@@ -196,7 +199,7 @@ function startImageSlider() {
     setInterval(() => {
         images[currentIndex].style.display = 'none';
         currentIndex = (currentIndex + 1) % images.length;
-        
+
         images[currentIndex].style.display = 'block';
     }, 5000);
 }
@@ -242,7 +245,7 @@ function showSignup() {
 
 async function checkId() {
     const id = document.getElementById('id').value;
-    
+
     if (!id) {
         alert('아이디를 입력해주세요.');
         return;
@@ -324,7 +327,7 @@ async function handleSignup(event) {
     } catch (error) {
         console.error('에러 상세:', error);
         const errorMessage = error.message ? error.message : '알 수 없는 오류';
-        
+
         alert(`서버와의 연결 중 문제가 발생했습니다: ${errorMessage}`);
     }
 }

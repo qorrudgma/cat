@@ -396,8 +396,8 @@ footer {
     flex-direction: column;
     padding: 20px;
     width: 100%;
-    max-width: 700px;
-    margin: 20px auto;
+    max-width: 800px;
+    margin: 100px auto;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -413,7 +413,7 @@ footer {
     color: #ffaa9d;
 }
 
-.input-field {
+.login-section .input-field {
     flex: 2;
     padding: 10px;
     border: 1px solid #d1d1d1;
@@ -449,9 +449,21 @@ footer {
 }
 
 /* ---------- 회원가입 부분  ---------- */
+.signup-section .input-field {
+    flex: 2;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    transition: border 0.3s ease;
+}
+
 .signup-label{
     width: 200px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: auto 20px;
     text-align: right;
 }
@@ -460,10 +472,15 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin: 0 auto;
 }
 
 #div-id{
     margin: 0;
+}
+
+#div-btn{
+    margin: 0 10px;
 }
 
 input::-webkit-outer-spin-button,
@@ -472,7 +489,7 @@ input::-webkit-inner-spin-button {/* input type="number" 에서 오른쪽에 스
   margin: 0;
 }
 
-#birth-label{
+#input-label{
     display: flex;
     margin-left: 250px;
     color: #a4a4a4;
@@ -480,7 +497,8 @@ input::-webkit-inner-spin-button {/* input type="number" 에서 오른쪽에 스
 
 /* 버튼 위치 옮기기 */
 #signup-btn{
-
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* --------- */
