@@ -204,34 +204,25 @@ function showHome() {
 //     }, 5000);
 // }
 // ======================================================
-function startImageSlider() {
-    const images = document.querySelectorAll('.slider-image');
-    let currentIndex = 0;
-    
-    setInterval(() => {
-        images[currentIndex].style.display = 'none';
-        currentIndex = (currentIndex + 1) % images.length;
-        
-        images[currentIndex].style.display = 'block';
-    }, 50);
-}
 
 $(function () {
-    // $(".txt1").animate({ marginLeft: "100px" }, 1000);
-    // $(".txt1").animate({ marginLeft: "300px" }, 1000);
-    // $(".txt1").animate({ marginLeft: "400px" }, 1000);
-    
-    $(".txt1").animate({ marginLeft: "100px" }, 1000)
-    .animate({ marginLeft: "300px" }, 1000)
-    .animate({ marginLeft: "400px" }, 1000);
-    
-    $(".txt2").animate({ marginLeft: "100px" }, 1000)
-    .animate({ marginLeft: "300px" }, 1000)
-    .animate({ marginLeft: "400px" }, 1000);
-    
-    $(".txt2").clearQueue(); //첫번째 애니메이션 빼고 나머지 제거
-})
-// ======================================================
+    let container = $("#image-container");
+    let images = $(".slider-image");
+    let imgWidth = images.first().outerWidth(); // 한 장의 이미지 너비
+    let slideSpeed = 1000; // 이동 속도
+    let interval = 5000;
+
+    container.css({ display: "flex", width: imgWidth * images.length });
+
+    function slide() {
+        container.animate({ marginLeft: -imgWidth }, slideSpeed, function () {
+            // 첫 번째 이미지를 맨 뒤로 이동 (무한 루프 효과)
+            container.append(container.children().first());
+            container.css({ marginLeft: 0 });
+        });
+    }
+    setInterval(slide, interval); // 일정 시간마다 실행
+});
 
 function showLogin() {
     document.getElementById('app').innerHTML = pages.login;
