@@ -167,7 +167,10 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: #ffaa9d;
+    /* ================================================================================== */
+    /* 글자색 바꾸는 부분 */
+    /* color: #ffaa9d; */
+    color: #2b2d42;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -439,6 +442,7 @@ footer {
     margin: 30px;
     color: #ffaa9d;
     text-align: right;
+    cursor: pointer;
 }
 
 .login-section button {

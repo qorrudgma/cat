@@ -100,7 +100,7 @@ const pages = {
                 <input type="password" id="password" class="input-field" placeholder="비밀번호" required>
             </div>
             <div id="a">
-                <a href="#">아이디 찾기</a>|<a href="#">비밀번호 찾기</a>|<a href="#">회원가입</a>
+                <a href="#" onclick="">아이디 찾기</a>|<a href="#" onclick="">비밀번호 찾기</a>|<a onclick="showSignup()">회원가입</a>
             </div>
             <div>
                 <button class="btn1" type="submit">로그인</button>
@@ -192,17 +192,46 @@ function showHome() {
     startImageSlider();
 }
 
+// function startImageSlider() {
+//     const images = document.querySelectorAll('.slider-image');
+//     let currentIndex = 0;
+
+//     setInterval(() => {
+//         images[currentIndex].style.display = 'none';
+//         currentIndex = (currentIndex + 1) % images.length;
+
+//         images[currentIndex].style.display = 'block';
+//     }, 5000);
+// }
+// ======================================================
 function startImageSlider() {
     const images = document.querySelectorAll('.slider-image');
     let currentIndex = 0;
-
+    
     setInterval(() => {
         images[currentIndex].style.display = 'none';
         currentIndex = (currentIndex + 1) % images.length;
-
+        
         images[currentIndex].style.display = 'block';
-    }, 5000);
+    }, 50);
 }
+
+$(function () {
+    // $(".txt1").animate({ marginLeft: "100px" }, 1000);
+    // $(".txt1").animate({ marginLeft: "300px" }, 1000);
+    // $(".txt1").animate({ marginLeft: "400px" }, 1000);
+    
+    $(".txt1").animate({ marginLeft: "100px" }, 1000)
+    .animate({ marginLeft: "300px" }, 1000)
+    .animate({ marginLeft: "400px" }, 1000);
+    
+    $(".txt2").animate({ marginLeft: "100px" }, 1000)
+    .animate({ marginLeft: "300px" }, 1000)
+    .animate({ marginLeft: "400px" }, 1000);
+    
+    $(".txt2").clearQueue(); //첫번째 애니메이션 빼고 나머지 제거
+})
+// ======================================================
 
 function showLogin() {
     document.getElementById('app').innerHTML = pages.login;
