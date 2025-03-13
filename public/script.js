@@ -2,9 +2,9 @@ const pages = {
     home: `
         <section class="image-slider">
             <div class="image-container" id="image-container">
-                <img src="image1.png" alt="image" class="slider-image">
-                <img src="image2.png" alt="image" class="slider-image" style="display: none;">
-                <img src="image3.png" alt="image" class="slider-image" style="display: none;">
+               <img src="/public/images/image1.png" alt="image" class="slider-image">
+            <img src="/public/images/image2.png" alt="image" class="slider-image" style="display: none;">
+            <img src="/public/images/image3.png" alt="image" class="slider-image" style="display: none;">
             </div>
         </section>
         <section class="main-adoption">
@@ -205,24 +205,34 @@ function showHome() {
 // }
 // ======================================================
 
-$(function () {
-    let container = $("#image-container");
-    let images = $(".slider-image");
-    let imgWidth = images.first().outerWidth(); // 한 장의 이미지 너비
-    let slideSpeed = 1000; // 이동 속도
-    let interval = 5000;
+// $(function () {
+//     $(".image-container").animate({ marginLeft: -$(".image-container").width() }, 1000);
+// })
 
-    container.css({ display: "flex", width: imgWidth * images.length });
+$(document).ready(function () {
+    let currentIndex = 0;
+    const slideCount = $(".slider-image").length;
+    const slideWidth = $(".image-slider").width();
 
-    function slide() {
-        container.animate({ marginLeft: -imgWidth }, slideSpeed, function () {
-            // 첫 번째 이미지를 맨 뒤로 이동 (무한 루프 효과)
-            container.append(container.children().first());
-            container.css({ marginLeft: 0 });
+    // 이미지 컨테이너 초기 크기 설정
+    $(".image-container").css("width", slideCount * slideWidth);
+
+    function slideImages() {
+        currentIndex++;
+
+        $(".image-container").animate({ left: -currentIndex * slideWidth }, 1000, function () {
+            if (currentIndex >= slideCount - 1) {
+                currentIndex = 0;
+                $(".image-container").css("left", 0);
+            }
         });
     }
-    setInterval(slide, interval); // 일정 시간마다 실행
+
+    // 3초마다 자동 슬라이드
+    setInterval(slideImages, 3000);
 });
+
+// ======================================================
 
 function showLogin() {
     document.getElementById('app').innerHTML = pages.login;
