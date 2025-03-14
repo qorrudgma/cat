@@ -192,52 +192,9 @@ function showHome() {
     startImageSlider();
 }
 
-// function startImageSlider() {
-//     const images = document.querySelectorAll('.slider-image');
-//     let currentIndex = 0;
-
-//     setInterval(() => {
-//         images[currentIndex].style.display = 'none';
-//         currentIndex = (currentIndex + 1) % images.length;
-
-//         images[currentIndex].style.display = 'block';
-//     }, 5000);
-// }
 // ======================================================
 
-// $(function () {
-//     $(".image-container").animate({ marginLeft: -$(".image-container").width() }, 1000);
-// })
 
-$(document).ready(function () {
-    let currentIndex = 0;
-    const slideCount = $(".slider-image").length;
-    const slideWidth = $(".image-slider").width();
-
-    // 이미지 컨테이너 초기 크기 설정
-    $(".image-container").css("width", slideCount * slideWidth);
-
-    function slideImages() {
-        currentIndex++;
-
-        $(".image-container").animate({ left: -currentIndex * slideWidth }, 1000, function () {
-            if (currentIndex >= slideCount - 1) {
-                currentIndex = 0;
-                $(".image-container").css("left", 0);
-            }
-        });
-    }
-
-    // 3초마다 자동 슬라이드
-    setInterval(slideImages, 3000);
-});
-
-// ======================================================
-
-function showLogin() {
-    document.getElementById('app').innerHTML = pages.login;
-    history.pushState({ page: 'login' }, '로그인', window.location.href);
-}
 
 async function handleLogin(event) {
     event.preventDefault();

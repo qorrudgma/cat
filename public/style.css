@@ -276,16 +276,17 @@ header {
     화면
 */
 
-/* .image-slider {
+.image-slider {
     display: flex;
     position: relative;
     margin: 50px;
     width: 100%;
-    max-width: 90%;
-    height: 650px;
+    max-width: 1000px;
+    height: 550px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .slider-container{
@@ -293,26 +294,39 @@ header {
     position: absolute;
     align-items: center;
     top: 0;
+    left: 0;
 }
 
-.container-image {
-    display: flex;
-    width: 100%;
-    border-radius: 35px;
-} */
+/* 버튼 만들어서 하기 */
+.slider-btn{
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    border: 0px;
+}
 
-.image-slider{
+.slider-btn:p{
+    background-color: #999999;
+}
+
+.slider-image {
+    display: flex;
+    width: 1000px;
+    border-radius: 35px;
+}
+
+/* .image-slider{
     display: flex;
     position: relative;;
     margin: 50px;
     overflow: hidden;
-    /* height: 700px; */
+    height: 700px;
 }
 
 .slider-container{
     position: absolute;
     flex-direction: row;
-}
+} */
 
 /* ---------- footer ---------- */
 footer {
