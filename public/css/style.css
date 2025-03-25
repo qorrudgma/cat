@@ -3,7 +3,7 @@
     cursor: default;
 }
 
-/* ---------- 기본 효과 ---------- */
+/* ---------- body ---------- */
 body {
     display: flex;
     flex-direction: column;
@@ -12,6 +12,7 @@ body {
     text-align: center;
     height: auto;
     margin: 0;
+    width: auto;
 }
 
 /* ---------- 버튼 효과 ---------- */
@@ -181,6 +182,13 @@ header {
     overflow: visible;
 }
 
+/* 네비안에 글자 색이랑 크기 조정하기 */
+.nav #nav-b{
+    color: #ff8d7b;
+    font-weight: bold;
+
+}
+
 .nav-catlaunge, .nav-adoption, .nav-foster, .nav-community, .nav-announcements {
     flex: 1;
     position: sticky;
@@ -266,66 +274,16 @@ header {
 }
 
 /* ---------- 메인페이지 ----------*/
-/* 
-    *** js파일에서 만들기 ***
-    1. 일정 시간마다 image-container이 사진 높이만큼 위로 올라가기
-    2. 맨위 사진이 맨아래로 자동이동
-    3. 무한 반복
-
-    가로 세로 길이들도 퍼센트로 하지말고 px로 해서 크기가 유지되게하고 이미지 슬라이더 뿐만아니라 모든 것들 그렇게 바꾸기
-    화면
-*/
 
 .image-slider {
     display: flex;
     position: relative;
-    top: 0px;
     margin: 50px;
-    width: 100%;
     max-width: 1000px;
     height: 480px;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     border-radius: 15px;
 }
-
-.slider-container{
-    display: flex;
-    position: absolute;
-    align-items: center;
-}
-
-/* 버튼 만들어서 하기 */
-.slider-btn{
-    border-radius: 20px;
-    width: 20px;
-    height: 20px;
-    border: 0px;
-}
-
-.slider-btn:p{
-    background-color: #999999;
-}
-
-.slider-image {
-    display: flex;
-    width: 1000px;
-    border-radius: 35px;
-}
-
-/* .image-slider{
-    display: flex;
-    position: relative;;
-    margin: 50px;
-    overflow: hidden;
-    height: 700px;
-}
-
-.slider-container{
-    position: absolute;
-    flex-direction: row;
-} */
 
 /* ---------- footer ---------- */
 footer {
