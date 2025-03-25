@@ -182,8 +182,6 @@ const pages = {
             </ol>
         </section>
     `,
-
-
 };
 
 function showHome() {
@@ -192,6 +190,10 @@ function showHome() {
     startImageSlider();
 }
 
+function showLogin() {
+    document.getElementById('app').innerHTML = pages.login;
+    history.pushState({ page: 'login' }, '로그인', window.location.href);
+}
 // ======================================================
 
 
