@@ -279,10 +279,11 @@ header {
 .image-slider {
     display: flex;
     position: relative;
+    top: 0px;
     margin: 50px;
     width: 100%;
     max-width: 1000px;
-    height: 550px;
+    height: 480px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -293,8 +294,6 @@ header {
     display: flex;
     position: absolute;
     align-items: center;
-    top: 0;
-    left: 0;
 }
 
 /* 버튼 만들어서 하기 */
