@@ -2,17 +2,17 @@
 .text, p, h1{
     cursor: default;
 }
-
+html{
+}
 /* ---------- body ---------- */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
     height: auto;
-    margin: 0;
-    width: auto;
+    margin: 0 auto;
 }
 
 /* ---------- 버튼 효과 ---------- */
@@ -174,6 +174,7 @@ header {
     /* color: #ffaa9d; */
     color: #2b2d42;
     position: sticky;
+    font-size: larger;
     top: 0;
     z-index: 1000;
     margin: 0;
@@ -184,8 +185,8 @@ header {
 
 /* 네비안에 글자 색이랑 크기 조정하기 */
 .nav #nav-b{
-    color: #ff8d7b;
-    font-weight: bold;
+    color: #fc725c;
+    font-weight: bolder;
 
 }
 
@@ -279,8 +280,8 @@ header {
     display: flex;
     position: relative;
     margin: 50px;
-    max-width: 1000px;
-    height: 480px;
+    max-width: 1500px;
+    height: 840px;
     overflow: hidden;
     border-radius: 15px;
 }

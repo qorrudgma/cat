@@ -1,93 +1,107 @@
 const pages = {
     home: `
-        <section class="image-slider">
-            <div class="image-container" id="image-container">
-               <img src="/public/images/image1.png" alt="image" class="slider-image">
-            <img src="/public/images/image2.png" alt="image" class="slider-image" style="display: none;">
-            <img src="/public/images/image3.png" alt="image" class="slider-image" style="display: none;">
+       <section class="image-slider">
+            <div class="slider-container" id="slider-container">
+                <img src="/public/images/image1.png" alt="image" class="slider-image">
+                <img src="/public/images/image2.png" alt="image" class="slider-image">
+                <img src="/public/images/image3.png" alt="image" class="slider-image">
             </div>
         </section>
+
+        <!-- 시설 소개 -->
+        <section>
+            <div class="line"></div>
+            <div>
+
+            </div>
+        </section>
+
+        <!-- 분양 설명 -->
         <section class="main-adoption">
             <div class="line"></div>
-            <div class="adoption">
+            <div class="main_title">
                 분양
             </div>
             <div class="adoption-list">
                 <ul class="adoption-list-ul">
                     <li>
                         <a href="" target="_blank">
-                            <img src="<%= cat.image_url %>" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat2.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat3.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat4.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat5.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat6.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat7.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                     <li>
                         <a href="" target="_blank">
-                            <img src="cat/cat8.jpg" alt="고양이">
+                            <img src="" alt="고양이">
                         </a>
                     </li>
                 </ul>
                 <button class="btn1" type="submit" aria-label="더 많은 고양이 사진 보기">더보기</button>
             </div>
         </section>
-        <section class="main-stories ">
-            <div class="line"></div>
-            <div class="stories ">
-                분양 후기
-            </div>
-                <ul class="story-list">
-                    <li>
-                        <img src="story1.jpg" alt="고양이 후기 1">
-                        <p>이 고양이는 정말 사랑스럽고 집 분위기를 밝게 해줍니다!</p>
-                    </li>
-                    <li>
-                        <img src="story2.jpg" alt="고양이 후기 2">
-                        <p>분양 후 처음 며칠은 낯설어했지만, 지금은 너무 잘 적응했어요!</p>
-                    </li>
-                    <li>
-                        <img src="story3.jpg" alt="고양이 후기 3">
-                        <p>고양이와 함께한 시간이 정말 행복합니다. 적극 추천해요!</p>
-                    </li>
-                </ul>
-                <button class="btn1" type="submit" aria-label="더 많은 후기 보기">더보기</button>
-        </section>
-        <section class="main-foster">
-            <div class="line"></div>
-            <div class="foster-text">
-                임시보호 서비스
-            </div>
-            <div class="foster-video">
-                 <img src="video.png" alt="video">
-            </div>
-        </section>
+
+    <!-- 분양 후기 설명 -->
+    <section class="main-stories ">
+        <div class="line"></div>
+        <div class="main_title ">
+            분양 후기
+        </div>
+            <ul class="story-list">
+                <li>
+                    <img src="story1.jpg" alt="고양이 후기 1">
+                    <p>이 고양이는 정말 사랑스럽고 집 분위기를 밝게 해줍니다!</p>
+                </li>
+                <li>
+                    <img src="story2.jpg" alt="고양이 후기 2">
+                    <p>분양 후 처음 며칠은 낯설어했지만, 지금은 너무 잘 적응했어요!</p>
+                </li>
+                <li>
+                    <img src="story3.jpg" alt="고양이 후기 3">
+                    <p>고양이와 함께한 시간이 정말 행복합니다. 적극 추천해요!</p>
+                </li>
+            </ul>
+            <button class="btn1" type="submit" aria-label="더 많은 후기 보기">더보기</button>
+    </section>
+
+    <!-- 임시보호 서비스 설명 -->
+    <section class="main-foster">
+        <div class="line"></div>
+        <div class="main_title">
+            임시보호 서비스
+        </div>
+        <div class="foster-video">
+             <img src="video.png" alt="video">
+        </div>
+    </section>
     `,
     login: `
     <section class="login-section">
@@ -187,7 +201,11 @@ const pages = {
 function showHome() {
     document.getElementById('app').innerHTML = pages.home;
     history.pushState({ page: 'home' }, '홈', window.location.href);
-    startImageSlider();
+    $(function() {
+        $(".slider-container").bxSlider({
+            auto:true
+        });
+    });
 }
 
 function showLogin() {
