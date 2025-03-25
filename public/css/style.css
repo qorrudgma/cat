@@ -2,8 +2,6 @@
 .text, p, h1{
     cursor: default;
 }
-html{
-}
 /* ---------- body ---------- */
 body {
     display: flex;
@@ -184,7 +182,7 @@ header {
 }
 
 /* 네비안에 글자 색이랑 크기 조정하기 */
-.nav #nav-b{
+.nav .b-bolder{
     color: #fc725c;
     font-weight: bolder;
 
@@ -276,6 +274,7 @@ header {
 
 /* ---------- 메인페이지 ----------*/
 
+/* ---------- 이미지 슬라이더 ---------- */
 .image-slider {
     display: flex;
     position: relative;
@@ -284,6 +283,43 @@ header {
     height: 840px;
     overflow: hidden;
     border-radius: 15px;
+}
+#main-intro{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-title{
+    font-size: 3em;
+    font-weight: bolder;
+    margin: 10px 50px;
+}
+
+.title-content{
+    font-size: 1em;
+    font-weight: bolder;
+    margin-top: 20px;
+    text-align: left;
+    color:#4b4b4b;
+}
+
+#main-hr{
+    width: 1600px;
+    border: solid 1px #d1d1d1;
+}
+
+.b-3em{
+    color: #fc725c;
+}
+
+/* ----------- */
+.main-foster .foster-video {
+    display: flex;
+    padding: 50px;
+    width: 100%;
+    max-width: 90%;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ---------- footer ---------- */
@@ -358,39 +394,6 @@ footer {
     font-size: 13px;
     text-align: left;
     line-height: 30px;
-}
-
-.line {
-    padding-top: 100px;
-    width: 90%;
-    margin: 0 auto;
-    border-bottom: solid 1px #d1d1d1;
-}
-
-.main-adoption, .main-stories, .main-foster {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-
-.main-adoption .adoption, .main-stories .stories, .main-foster .foster-text {
-    display: flex;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 10%;
-    font-size: 50px;
-    font-weight: bold;
-    color: #ffaa9d;
-    
-}
-
-.main-foster .foster-video {
-    display: flex;
-    padding: 50px;
-    width: 100%;
-    max-width: 90%;
-    align-items: center;
-    justify-content: center;
 }
 
 /* ---------- 로그인 부분  ---------- */
