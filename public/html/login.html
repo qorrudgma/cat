@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/css/style.css" rel="stylesheet">
+    <link href="/public/css/jquery.bxslider.css" rel="slider">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/script.js"></script>
+    <script src="/public/js/jquery.bxslider.js"></script>
+    <title>고양이 사랑방</title>
+</head>
+<body>
+    <section class="login-section">
+        <h1>로그인</h1>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div>
+                <input type="text" id="id" class="input-field" placeholder="아이디" required>
+            </div>
+            <div>
+                <input type="password" id="password" class="input-field" placeholder="비밀번호" required>
+            </div>
+            <div id="a">
+                <a href="#" onclick="">아이디 찾기</a>|<a href="#" onclick="">비밀번호 찾기</a>|<a onclick="showSignup()">회원가입</a>
+            </div>
+            <div>
+                <button class="btn1" type="submit">로그인</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

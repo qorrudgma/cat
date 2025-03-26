@@ -13,7 +13,52 @@ body {
     margin: 0 auto;
 }
 
+header{
+    height: 20px;
+}
+
 /* ---------- 버튼 효과 ---------- */
+/* 중복이 많지만 그냥 따로적기 */
+#side-top{
+    position: fixed;
+    top: 525px;
+    left: 1800px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.side-btn img{
+    width: 30px;
+}
+
+#side-login{
+    position: fixed;
+    top: 565px;
+    left: 1800px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#side-signup{
+    position: fixed;
+    top: 605px;
+    left: 1800px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#side-home{
+    position: fixed;
+    top: 645px;
+    left: 1800px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
 .btn1 {
     background-color: #ffaa9d;
     color: white;
@@ -167,9 +212,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* ================================================================================== */
-    /* 글자색 바꾸는 부분 */
-    /* color: #ffaa9d; */
     color: #2b2d42;
     position: sticky;
     font-size: larger;
@@ -279,11 +321,14 @@ header {
     display: flex;
     position: relative;
     margin: 50px;
+    /* margin-bottom: 200px; */
     max-width: 1500px;
     height: 840px;
     overflow: hidden;
     border-radius: 15px;
 }
+
+/* ---------- 메인 시설 소개 ---------- */
 #main-intro{
     display: flex;
     flex-direction: row;
@@ -306,20 +351,22 @@ header {
 #main-hr{
     width: 1600px;
     border: solid 1px #d1d1d1;
+    margin-bottom: 100px;
 }
 
 .b-3em{
     color: #fc725c;
 }
 
-/* ----------- */
-.main-foster .foster-video {
-    display: flex;
-    padding: 50px;
-    width: 100%;
-    max-width: 90%;
-    align-items: center;
-    justify-content: center;
+.iframe-v{
+    margin: auto;
+    width: 1300px;
+    height: 600px;
+    background-color: #ffaa9d;
+}
+
+.iframe-v iframe{
+    margin-top: 50px;
 }
 
 /* ---------- footer ---------- */

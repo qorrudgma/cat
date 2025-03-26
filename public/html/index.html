@@ -15,11 +15,37 @@
             $(".slider-container").bxSlider({
                 auto:true
             });
+            $("#side-top").on("click",function () {
+                $('html').animate({scrollTop: '0'}, 680);
+            });
         });
     </script>
 </head>
 
+<!--
+    전체적으로 이미지드링 너무 큼 사이즈 줄일필요가 있다고 봄
+    70퍼로 크기 줄이기
+    그리고 너무 그림만있음 간단한 설명이나 그런것들도 있으면 좋겠음
+    너무 싼티남
+
+-->
+
+
+
 <body>
+    <button class="side-btn" id="side-top">
+        <img src="/public/images/free-icon-right-arrow-271228.png">
+    </button>
+    <button class="side-btn" id="side-login" onclick="showLogin()">
+        <img src="/public/images/free-icon-login-7856156.png">
+    </button>
+    <button class="side-btn" id="side-signup" onclick="showSignup()">
+        <img src="/public/images/free-icon-user-15228538.png">
+    </button>
+    <button class="side-btn" id="side-home" onclick="showHome()">
+        <img src="/public/images/free-icon-home-15954333.png">
+    </button>
+
     <header>
         <div id="header-left-space"></div> <!-- 왼쪽 여백 -->
         <div class="social-links">
@@ -123,8 +149,8 @@
             </div>
         </div>
         <hr id="main-hr">
-        <div>
-            여기다가 시설소개 내용이 들어감
+        <div class="iframe-v">
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/j8XkxDuFq8w?si=UqgDJSTRU_U2pk93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
