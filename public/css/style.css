@@ -21,7 +21,7 @@ header{
 /* 중복이 많지만 그냥 따로적기 */
 #side-top{
     position: fixed;
-    top: 525px;
+    top: 555px;
     left: 1800px;
     z-index: 1000;
     background-color: #fff;
@@ -34,7 +34,7 @@ header{
 
 #side-login{
     position: fixed;
-    top: 565px;
+    top: 595px;
     left: 1800px;
     z-index: 1000;
     background-color: #fff;
@@ -43,7 +43,7 @@ header{
 
 #side-signup{
     position: fixed;
-    top: 605px;
+    top: 635px;
     left: 1800px;
     z-index: 1000;
     background-color: #fff;
@@ -52,7 +52,7 @@ header{
 
 #side-home{
     position: fixed;
-    top: 645px;
+    top: 675px;
     left: 1800px;
     z-index: 1000;
     background-color: #fff;
@@ -322,13 +322,23 @@ header {
     position: relative;
     margin: 50px;
     /* margin-bottom: 200px; */
-    max-width: 1500px;
-    height: 840px;
+    max-width: 1300px;
+    height: 640px;
     overflow: hidden;
     border-radius: 15px;
 }
 
-/* ---------- 메인 시설 소개 ---------- */
+.slider-image{
+    width: 1000PX;
+    height: 640px;
+}
+
+/* ---------- 시설 소개 ---------- */
+.main-facility, .main-adoption, .main-stories, .main-foster {
+    margin: 0px;
+    padding-top: 70px;
+}
+
 #main-intro{
     display: flex;
     flex-direction: row;
@@ -360,14 +370,157 @@ header {
 
 .iframe-v{
     margin: auto;
+    margin-bottom: 100px;
     width: 1300px;
-    height: 600px;
-    background-color: #ffaa9d;
+    height: 660px;
+    background-color: #ffbfb5;
+    border-radius: 30px;
 }
 
 .iframe-v iframe{
+    margin-top: 80px;
+}
+
+.intro-div-parent{
+    margin: auto;
+    margin-bottom: 100px;
+    justify-content: left;
+    width: 1300px;
+    height: 660px;
+    border-radius: 30px;
+}
+
+#intro-div-child1{
+    float: left;
+    height: 630px;
+    padding-left: 100px;
+}
+
+#intro-div-child2{
+    float: left;
+    padding: 70px;
+    padding-top: 150px;
+    height: auto;
+    width: auto;
+    max-width: 500px;
+}
+
+#intro-div-child3{
+    float: left;
+    padding: 70px;
+    padding-top: 150px;
+    height: auto;
+    width: auto;
+    max-width: 500px;
+}
+
+#intro-div-child4{
+    float: left;
+    height: 630px;
+    /* padding-left: 100px; */
+}
+
+#intro-picture{
+    height: 630px;
+    width: 500px;
+    border-radius: 30px;
+}
+
+.b-4em{
+    font-size: 4em;
+}
+
+#picture-text{
     margin-top: 50px;
 }
+
+#picture-text b{
+    font-size: large;
+}
+
+/* ---------- 고양이 소개 ---------- */
+.adoption-list {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.adoption-list-ul {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 30px 0;
+}
+.adoption-list-ul li {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adoption-list-ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.adoption-div{
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 400px;
+    background-color: #ddd;
+}
+
+.adoption-cat {
+    width: 300px;
+    margin: auto;
+}
+
+.adoption-list-ul li img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.adoption-img {
+    width: 300px;
+    max-height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.adoption-list-ul li:hover .adoption-img {
+    overflow: visible;
+    opacity: 0.9;
+}
+
+.adoption-list-ul li a img {
+    transition: opacity 0.3s ease;
+}
+
+.adoption-name{
+    margin: 5px 0;
+}
+
+.adoption-text{
+    padding: 0px 20px;
+    width: 250px;
+    height: auto;
+    overflow: hidden;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.adoption-list-ul li a {
+    display: block;
+    text-decoration: none;
+}
+
 
 /* ---------- footer ---------- */
 footer {
@@ -561,56 +714,3 @@ input::-webkit-inner-spin-button {/* input type="number" 에서 오른쪽에 스
 }
 
 /* --------- */
-.backtext {
-    color: #a4a4a4;
-    font-size: 1rem;
-}
-
-.adoption-list {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.adoption-list-ul {
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 30px 0 30px 0;
-}
-
-.adoption-list-ul li {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.adoption-list-ul li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.adoption-list-ul li img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-.adoption-list-ul li a {
-    display: block;
-    text-decoration: none;
-}
-
-.adoption-list-ul li a img {
-    transition: opacity 0.3s ease;
-}
-
-.adoption-list-ul li:hover a img {
-    opacity: 0.9;
-}
